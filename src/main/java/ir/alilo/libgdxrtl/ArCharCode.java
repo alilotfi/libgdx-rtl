@@ -19,10 +19,6 @@
 
 package ir.alilo.libgdxrtl;
 
-/**
- * Created by Crowni on 10/2/2017.
- **/
-
 public class ArCharCode {
     public static final int X0 = 0;
     public static final int X2 = 2;

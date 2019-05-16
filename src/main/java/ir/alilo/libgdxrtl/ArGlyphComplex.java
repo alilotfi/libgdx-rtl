@@ -21,10 +21,6 @@ package ir.alilo.libgdxrtl;
 
 import com.badlogic.gdx.utils.Array;
 
-/**
- * Created by Crowni on 10/5/2017.
- **/
-
 public class ArGlyphComplex extends ArGlyph {
 
     private Array<ArGlyph> simpleGlyphs;

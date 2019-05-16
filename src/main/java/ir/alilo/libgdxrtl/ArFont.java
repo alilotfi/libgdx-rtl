@@ -21,15 +21,11 @@ package ir.alilo.libgdxrtl;
 
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.utils.Array;
-import com.badlogic.gdx.utils.CharArray;
 
 import java.awt.event.KeyEvent;
 
 import static ir.alilo.libgdxrtl.ArUtils.getIndividualChar;
 
-/**
- * Created by Crowni on 10/5/2017.
- **/
 public class ArFont {
     private Array<ArGlyph> glyphs = new Array<ArGlyph>();
 
@@ -54,9 +50,6 @@ public class ArFont {
         glyphs.add(glyph);
         for (int i = 1; i <= 2; i += 1)
             filterLastChars(i);
-
-        /** CONSOLE **/
-        System.out.println("==================================");
     }
 
     private void popChar() {
@@ -98,16 +91,6 @@ public class ArFont {
     }
 
     /**
-     * CONSOLE
-     **/
-    private int CASE = 0;
-
-    private boolean printCase(int i) {
-        this.CASE = i;
-        return true;
-    }
-
-    /**
      * @param glyph
      * @return ArGlyph after filtering process.
      */
@@ -119,19 +102,13 @@ public class ArFont {
         ArGlyph before = getPositionGlyph(glyph, -1);
         ArGlyph after = getPositionGlyph(glyph, +1);
 
-
-        /** CASE 1 **/
-        if (before == null && after == null && /** CONSOLE **/printCase(1))
+        if (before == null && after == null)
             glyph.setChar(getIndividualChar(glyph.getOriginalChar()));
 
-
-        /** CASE 2 **/
-        if (before == null && after != null && /** CONSOLE **/printCase(2))
+        if (before == null && after != null)
             glyph.setChar(ArUtils.getStartChar(glyph.getOriginalChar()));
 
-
-        /** CASE 3 **/
-        if (before != null && after == null && /** CONSOLE **/printCase(3))
+        if (before != null && after == null)
             if (ArUtils.isALFChar(glyph.getOriginalChar()) && ArUtils.isLAMChar(before.getOriginalChar())) {
                 addComplexChars(glyph);
             } else {
@@ -141,9 +118,7 @@ public class ArFont {
                     glyph.setChar(ArUtils.getEndChar(glyph.getOriginalChar()));
             }
 
-
-        /** CASE 4 **/
-        if (before != null && after != null && /** TEST **/printCase(4))
+        if (before != null && after != null)
             if (glyph.getType() == ArCharCode.X4) {
                 if (before.getType() == ArCharCode.X2)
                     glyph.setChar(ArUtils.getStartChar(glyph.getOriginalChar()));
@@ -178,13 +153,8 @@ public class ArFont {
     }
 
     private void filterLastChars(int i) {
-        ArGlyph arGlyph = null;
         if (glyphs.size - i > -1)
-            arGlyph = filter(glyphs.get(glyphs.size - i));
-
-        /** CONSOLE **/
-        if (arGlyph != null)
-            System.out.println("CASE " + CASE + ": " + arGlyph.getOriginalChar() + " To : " + arGlyph.getChar());
+            filter(glyphs.get(glyphs.size - i));
     }
 }
 

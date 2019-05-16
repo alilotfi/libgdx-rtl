@@ -22,10 +22,6 @@ package ir.alilo.libgdxrtl;
 import com.badlogic.gdx.utils.CharArray;
 import ir.alilo.libgdxrtl.ArCharCode.*;
 
-/**
- * Created by Crowni on 10/5/2017.
- **/
-
 public class ArUtils {
     private static final char EMPTY = 0;
     private static final IndividualChar[] chars;

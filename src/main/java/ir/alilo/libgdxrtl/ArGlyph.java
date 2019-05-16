@@ -19,10 +19,6 @@
 
 package ir.alilo.libgdxrtl;
 
-/**
- * Created by Crowni on 10/5/2017.
- **/
-
 public class ArGlyph {
 
     protected final char originalChar;

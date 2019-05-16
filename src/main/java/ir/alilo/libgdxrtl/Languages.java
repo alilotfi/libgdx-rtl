@@ -1,9 +1,5 @@
 package ir.alilo.libgdxrtl;
 
-/**
- * Created by Crowni on 10/11/2017.
- **/
-
 public enum Languages {
 
     ENGLISH(32, 160),
