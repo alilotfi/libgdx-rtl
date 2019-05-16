@@ -1,0 +1,41 @@
+plugins {
+    id 'java-library'
+    id 'com.jfrog.bintray' version '1.8.4'
+    id 'maven-publish'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    api 'com.badlogicgames.gdx:gdx:1.9.9'
+}
+
+bintray {
+    user = System.getenv('BINTRAY_USER')
+    key = System.getenv('BINTRAY_KEY')
+    pkg {
+        repo = 'maven'
+        name = 'libgdx-rtl'
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/alilotfi/libgdx-rtl.git'
+        version {
+            name = '0.1'
+            desc = 'This library adds RTL support to libGDX. So far it contains all Persian and Arabic letters and can be extended to support any other RTL language as well.'
+            released = new Date()
+            vcsTag = '0.1'
+        }
+    }
+}
+
+publishing {
+    publications {
+        MyPublication(MavenPublication) {
+            from components.java
+            groupId 'ir.alilo.libgdx'
+            artifactId 'libgdx-rtl'
+            version '0.1'
+        }
+    }
+}
