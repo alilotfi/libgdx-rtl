@@ -17,7 +17,7 @@
  *
  */
 
-package com.crowni.gdx.rtllang.support;
+package ir.alilo.libgdxrtl;
 
 /**
  * Created by Crowni on 10/5/2017.

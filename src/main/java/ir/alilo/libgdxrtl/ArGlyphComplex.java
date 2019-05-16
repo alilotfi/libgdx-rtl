@@ -17,7 +17,7 @@
  *
  */
 
-package com.crowni.gdx.rtllang.support;
+package ir.alilo.libgdxrtl;
 
 import com.badlogic.gdx.utils.Array;
 

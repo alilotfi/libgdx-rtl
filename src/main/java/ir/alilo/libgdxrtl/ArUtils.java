@@ -17,10 +17,10 @@
  *
  */
 
-package com.crowni.gdx.rtllang.support;
+package ir.alilo.libgdxrtl;
 
 import com.badlogic.gdx.utils.CharArray;
-import com.crowni.gdx.rtllang.support.ArCharCode.*;
+import ir.alilo.libgdxrtl.ArCharCode.*;
 
 /**
  * Created by Crowni on 10/5/2017.

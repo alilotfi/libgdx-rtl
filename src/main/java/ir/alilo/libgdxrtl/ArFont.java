@@ -17,7 +17,7 @@
  *
  */
 
-package com.crowni.gdx.rtllang.support;
+package ir.alilo.libgdxrtl;
 
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.utils.Array;
@@ -25,7 +25,7 @@ import com.badlogic.gdx.utils.CharArray;
 
 import java.awt.event.KeyEvent;
 
-import static com.crowni.gdx.rtllang.support.ArUtils.getIndividualChar;
+import static ir.alilo.libgdxrtl.ArUtils.getIndividualChar;
 
 /**
  * Created by Crowni on 10/5/2017.
